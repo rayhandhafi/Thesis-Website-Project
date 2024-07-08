@@ -1,6 +1,40 @@
-// This example displays a marker at the center of Australia.
-// When the user clicks the marker, an info window opens.
+function openAddDeviceModal() {
+  document.getElementById('addDeviceModal').style.display = 'block';
+}
+
+function closeAddDeviceModal() {
+  document.getElementById('addDeviceModal').style.display = 'none';
+}
+
+function openSuccessModal() {
+  document.getElementById('successModal').style.display = 'block';
+}
+
+function closeSuccessModal() {
+  document.getElementById('successModal').style.display = 'none';
+  document.getElementById('addDeviceModal').style.display = 'none';
+}
+
+function submitDeviceCode() {
+  addDevice();
+}
+
 function initMap() {
+  const mapOptions = {
+      center: { lat: -6.9175, lng: 107.6191 },
+      zoom: 12
+  };
+  const map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+  const marker = new google.maps.Marker({
+      position: { lat: -6.9175, lng: 107.6191 },
+      map: map,
+      title: "Device Location"
+  });
+}
+
+
+/*function initMap() {
   const bandung = { lat: -6.914744, lng: 107.609810 };
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 12,
@@ -34,4 +68,4 @@ function initMap() {
   });
 }
 
-window.initMap = initMap;
+window.initMap = initMap;*/

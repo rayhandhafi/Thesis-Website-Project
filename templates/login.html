@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://5ba9898d-1b7d-4923-97b8-505eaf7cecf2-00-3r77exdax7qfr.worf.replit.dev/static/login.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <h1 class="login-title">USER <br><span>Masuk</span></h1>
+            <form>
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Email anda">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password anda">
+                    <span class="password-toggle"><i class="ri-eye-line"></i></span>
+                    <small>Password harus minimum 8 kata, nomor, dan simbol.</small>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox" name="remember"> Ingat Saya</label>
+                    <a href="#">Lupa Password?</a>
+                </div>
+                <a href="/dashboard"><button type="submit" class="login-btn">Masuk</button></a>
+                <button type="button" class="google-btn"><i class="ri-google-line"></i> Masuk dengan Google</button>
+                <p class="signup-link">Belum Mempunyai Akun? <a href="/register">Daftar</a></p>
+            </form>
+        </div>
+        <div class="login-image">
+            <img src="https://via.placeholder.com/500x600.png?text=Image" alt="Login Image">
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"></script>
+</body>
+</html>

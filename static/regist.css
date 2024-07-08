@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f8fa;
+}
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.register-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.register-image {
+    flex: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffd700;
+}
+
+.register-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.register-title {
+    font-size: 2rem;
+    color: #24405F;
+    margin-bottom: 1rem;
+}
+
+.register-title span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #718096;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.input-group small {
+    display: block;
+    margin-top: 0.5rem;
+    color: #718096;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 2.25rem;
+    cursor: pointer;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #C6000D;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.register-btn:hover {
+    background-color: #a0000b;
+}
+
+.google-btn {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #C6000D;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #C6000D;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.google-btn:hover {
+    background-color: #f7f8fa;
+}
+
+.signin-link {
+    text-align: center;
+    color: #718096;
+}
+
+.signin-link a {
+    color: #24405F;
+    text-decoration: none;
+}
+
+.signin-link a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .register-container {
+        flex-direction: row;
+    }
+
+    .register-form {
+        flex: 1;
+        padding: 3rem;
+    }
+
+    .register-image {
+        display: flex;
+        flex: 1;
+    }
+
+    .register-title {
+        font-size: 2.5rem;
+    }
+
+    .register-title span {
+        font-size: 3rem;
+    }
+
+    .input-group input {
+        padding: 0.75rem 3rem 0.75rem 1rem;
+    }
+
+    .password-toggle {
+        top: 1.75rem;
+    }
+}

@@ -10,6 +10,7 @@ packages = [{include = "repl_nix_thesis_website_project"}]
 python = "^3.10"
 flask = "^3.0.3"
 markupsafe = "^2.1.5"
+paho-mqtt = "^2.1.0"
 
 
 [build-system]
