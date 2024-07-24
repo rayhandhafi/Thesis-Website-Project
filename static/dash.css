@@ -1,108 +1,128 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f7f8fa;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
 .dashboard-container {
     display: flex;
-    height: 100%;
 }
 
 .sidebar {
-    width: 200px;
-    background-color: #c6000d;
+    width: 220px;
+    background-color: #d32f2f;
+    padding: 20px;
     color: #fff;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
+    position: fixed;
 }
 
 .sidebar ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    flex-grow: 1;
 }
 
 .sidebar ul li {
-    margin: 1rem 0;
+    margin: 20px 0;
 }
 
 .sidebar ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.sidebar ul li a::before {
+    content: '🔸';
+    margin-right: 10px;
 }
 
 .content {
-    flex: 1;
-    padding: 2rem;
-    overflow-y: auto;
+    margin-left: 240px;
+    padding: 20px;
+    width: calc(100% - 240px);
 }
 
-header {
-    margin-bottom: 2rem;
+.header {
+    margin-bottom: 20px;
 }
 
-header h1 {
-    font-size: 2.5rem;
+.header h1 {
     margin: 0;
-    color: #24405f;
+    color: #333;
+    font-weight: 600;
 }
 
-header h2 {
-    font-size: 1.5rem;
-    color: #c6000d;
+.header h2 {
+    color: #d32f2f;
+    margin-top: 5px;
+    font-weight: 400;
 }
 
 .device-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 180px); /* Adjust based on header height and padding */
 }
 
-.no-device img {
-    max-width: 50%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+.device-section .no-device {
+    margin: 50px 0;
 }
 
+.device-section .no-device img {
+    width: 150px;
+    margin-bottom: 20px;
+}
 
+.device-section .no-device p {
+    font-size: 18px;
+    margin: 20px 0;
+}
 
-.add-device-btn {
-    background-color: #c6000d;
+.device-section .no-device .add-device-btn {
+    background-color: #d32f2f;
     color: #fff;
     border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    font-size: 2rem;
-    cursor: pointer;
-    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
-.add-device-btn:hover {
-    background-color: #a0000b;
-}
-
-.map {
+.device-section .map {
     width: 100%;
     height: 500px;
-    margin-top: 2rem;
-    display: none;
+    margin-top: 20px;
+    display: none; /* Ensure it is hidden by default */
+}
+
+.device-section .disconnect-btn {
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
 }
 
 .modal {
@@ -114,82 +134,72 @@ header h2 {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
     background-color: #fff;
     margin: 15% auto;
-    padding: 2rem;
+    padding: 20px;
     border: 1px solid #888;
-    width: 300px;
-    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
     text-align: center;
-    position: relative;
 }
 
-.modal-content .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+.modal .close {
     color: #aaa;
-    font-size: 1.5rem;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+    color: #000;
+    text-decoration: none;
     cursor: pointer;
 }
 
-.modal-content h2 {
-    margin: 0 0 1rem;
+.modal input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.modal-content button {
-    background-color: #c6000d;
+.modal button {
+    background-color: #d32f2f;
     color: #fff;
     border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
-.modal-content button:hover {
-    background-color: #a0000b;
-}
-
-.modal-content img {
-    max-width: 50%;
-    height: auto;
+#successModal img {
+    width: 50px;
     display: block;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 
-/* Responsive Styles */
-@media (min-width: 768px) {
-    .dashboard-container {
-        flex-direction: row;
-    }
+#successModal h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
 
-    .sidebar {
-        width: 200px;
-        text-align: left;
-    }
+#successModal p {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-    .content {
-        padding: 3rem;
-    }
-
-    header h1 {
-        font-size: 3rem;
-    }
-
-    header h2 {
-        font-size: 2rem;
-    }
-
-    .modal-content {
-        width: 400px;
-        margin: 10% auto;
-    }
-
-    .map {
-        height: 600px;
-    }
+#successModal button {
+    display: block;
+    margin: 0 auto;
 }

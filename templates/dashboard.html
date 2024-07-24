@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://5ba9898d-1b7d-4923-97b8-505eaf7cecf2-00-3r77exdax7qfr.worf.replit.dev/static/dash.css">
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv20GPz3KQp-1wAmtlCiohr8E-gT5QBAk&callback=initMap" async defer></script>
+    <script src="https://5ba9898d-1b7d-4923-97b8-505eaf7cecf2-00-3r77exdax7qfr.worf.replit.dev/static/map.js" defer></script>
+    <script src="https://5ba9898d-1b7d-4923-97b8-505eaf7cecf2-00-3r77exdax7qfr.worf.replit.dev/static/mqtt.js" defer></script>
+</head>
+    <body>
+        <div class="dashboard-container">
+            <nav class="sidebar">
+                <ul>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#" id="logout-btn">Keluar</a></li>
+                </ul>
+            </nav>
+            <main class="content">
+                <header class="header">
+                    <h1>Beranda</h1>
+                    <h2>Perangkat</h2>
+                    <hr>
+                </header>
+                <div class="device-section">
+                    <div class="no-device" id="no-device">
+                        <img src="{{ url_for('static', filename='no-device.png') }}" alt="No Device Connected">
+                        <p>Belum ada perangkat yang terhubung</p>
+                        <button class="add-device-btn" onclick="openAddDeviceModal()">+</button>
+                    </div>
+                    <div id="map" class="map"></div>
+                    <button class="disconnect-btn" id="disconnect-btn" onclick="disconnectDevice()" style="display: none;">Disconnect</button>
+                </div>
+            </main>
+        </div>
+
+        <div id="addDeviceModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeAddDeviceModal()">&times;</span>
+                <h2>Masukkan Kode</h2>
+                <input type="text" id="deviceCode" placeholder="Device Code">
+                <button onclick="submitDeviceCode()">Submit</button>
+            </div>
+        </div>
+
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeSuccessModal()">&times;</span>
+                <img src="{{ url_for('static', filename='check.png') }}" alt="Success">
+                <h2>Hurray :)</h2>
+                <p>Device telah berhasil ditambahkan</p>
+                <button onclick="closeSuccessModal()">Lihat GPS</button>
+            </div>
+        </div>
+
+        <script>
+            // Handle logout
+            document.getElementById('logout-btn').addEventListener('click', () => {
+                window.location.href = '/';
+            });
+        </script>
+    </body>
+</html>

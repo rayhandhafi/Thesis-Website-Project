@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - DST x Telkomsel</title>
+    <link rel="stylesheet" href="https://5ba9898d-1b7d-4923-97b8-505eaf7cecf2-00-3r77exdax7qfr.worf.replit.dev/static/about.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="navheader">
+            <div class="navlogo">
+                <a href="#"><img class="logo" src="{{ url_for('static', filename='logo_DST.png') }}" alt="DST Logo"></a>
+            </div>
+            <div class="navmenubtn" id="menu-btn">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+        <ul class="navlinks" id="nav-links">
+            <li><a href="/">Beranda</a></li>
+            <li><a href="/about">Tentang Kami</a></li>
+        </ul>
+        <div class="navbtns">
+            <a href="/login"><button class="btn">Masuk</button></a>
+            <a href="/register"><button class="btn">Daftar</button></a>
+        </div>
+    </nav>
+
+    <!-- Header Image -->
+    <header class="section_container header_container">
+        <div class="headerimage">
+            <img src="{{ url_for('static', filename='header_image.png') }}" alt="header">
+        </div>
+    </header>
+
+    <!-- About Us Content -->
+    <section class="about-us section_container">
+        <h1>Tel - U x Telkomsel</h1>
+        <div class="logos">
+            <img src="https://5ba9898d-1b7d-4923-97b8-505eaf7cecf2-00-3r77exdax7qfr.worf.replit.dev/static/telu.png" alt="Tel-U Logo">
+            <span>x</span>
+            <img src="https://5ba9898d-1b7d-4923-97b8-505eaf7cecf2-00-3r77exdax7qfr.worf.replit.dev/static/telkomsel.png" alt="Telkomsel Logo">
+        </div>
+        <p>Selamat datang di proyek inovatif kami di Telkom University! Kami adalah sekelompok mahasiswa tingkat akhir yang berdedikasi untuk menciptakan solusi teknologi yang berdampak positif bagi masyarakat. Proyek kami saat ini berfokus pada pengembangan <strong>GPS Down Syndrome Tracker</strong>, sebuah perangkat pelacak GPS yang dirancang khusus untuk anak-anak dengan Down Syndrome. Dalam kolaborasi dengan Telkomsel, kami memanfaatkan teknologi Internet of Things (IoT) dan jaringan canggih Telkomsel untuk menyediakan pemantauan lokasi secara real-time.</p>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team section_container">
+        <h2>Tim Dibalik Projek Ini</h2>
+        <div class="team-members">
+            <div class="member">
+                <img src="{{ url_for('static', filename='AAI.jpg') }}" alt="Ahda Akmalul Ilmi">
+                <h3>Ahda Akmalul Ilmi</h3>
+                <p>IoT Engineer</p>
+                <div class="social-icons">
+                    <a href="#"><img src="{{ url_for('static', filename='ig-icon.png') }}" alt="Instagram"></a>
+                    <a href="#"><img src="{{ url_for('static', filename='linkedin-icon.png') }}" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="member">
+                <img src="{{ url_for('static', filename='BEY.jpg') }}" alt="Fabiano Abbey Karo Sekali">
+                <h3>Fabiano Abbey Karo Sekali</h3>
+                <p>Mobile App Developer</p>
+                <div class="social-icons">
+                    <a href="#"><img src="{{ url_for('static', filename='ig-icon.png') }}" alt="Instagram"></a>
+                    <a href="#"><img src="{{ url_for('static', filename='linkedin-icon.png') }}" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="member">
+                <img src="{{ url_for('static', filename='RDA.jpg') }}" alt="Rayhan Dhafi">
+                <h3>Rayhan Dhafi</h3>
+                <p>Website Developer</p>
+                <div class="social-icons">
+                    <a href="#"><img src="{{ url_for('static', filename='ig-icon.png') }}" alt="Instagram"></a>
+                    <a href="#"><img src="{{ url_for('static', filename='linkedin-icon.png') }}" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="member">
+                <img src="{{ url_for('static', filename='SAT.jpg') }}" alt="Satria Winekas Herlambang">
+                <h3>Satria Winekas Herlambang</h3>
+                <p>Project Manager</p>
+                <div class="social-icons">
+                    <a href="#"><img src="{{ url_for('static', filename='ig-icon.png') }}" alt="Instagram"></a>
+                    <a href="#"><img src="{{ url_for('static', filename='linkedin-icon.png') }}" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <nav class="footer-links">
+                <a href="#">Beranda</a>
+                <a href="#">Tentang Kami</a>
+            </nav>
+            <div class="footer-social">
+                <a href="#" class="social-icon"><img src="{{ url_for('static', filename='ig-icon.png') }}" alt="Instagram"></a>
+                <a href="#" class="social-icon"><img src="{{ url_for('static', filename='linkedin-icon.png') }}" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>DST &copy; 2024. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://5ba9898d-1b7d-4923-97b8-505eaf7cecf2-00-3r77exdax7qfr.worf.replit.dev/static/script.js"></script>
+</body>
+</html>

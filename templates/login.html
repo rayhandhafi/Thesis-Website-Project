@@ -11,7 +11,7 @@
     <div class="login-container">
         <div class="login-form">
             <h1 class="login-title">USER <br><span>Masuk</span></h1>
-            <form>
+            <form action ="/login" method="post">
                 <div class="input-group">
                     <label for="email">Email Address</label>
                     <input type="email" id="email" name="email" placeholder="Email anda">
@@ -26,13 +26,13 @@
                     <label><input type="checkbox" name="remember"> Ingat Saya</label>
                     <a href="#">Lupa Password?</a>
                 </div>
-                <a href="/dashboard"><button type="submit" class="login-btn">Masuk</button></a>
-                <button type="button" class="google-btn"><i class="ri-google-line"></i> Masuk dengan Google</button>
+                <input type="submit" class="login-btn"></input>
+                <a href="/dashboard"><button type="button" class="google-btn"><i class="ri-google-line"></i> Masuk dengan Google</button></a>
                 <p class="signup-link">Belum Mempunyai Akun? <a href="/register">Daftar</a></p>
             </form>
         </div>
         <div class="login-image">
-            <img src="https://via.placeholder.com/500x600.png?text=Image" alt="Login Image">
+            <img src="{{ url_for('static', filename='ds-log.jpg') }}" alt="Login Image">
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"></script>

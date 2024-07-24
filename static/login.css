@@ -28,15 +28,16 @@ body {
 
 .login-image {
     flex: 1;
-    background-color: #ffd700;
     display: none;
     align-items: center;
     justify-content: center;
+    background-color: #fff;
 }
 
 .login-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 .login-title {
