@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="https://5ba9898d-1b7d-4923-97b8-505eaf7cecf2-00-3r77exdax7qfr.worf.replit.dev/static/dash.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dash.css') }}">
     <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv20GPz3KQp-1wAmtlCiohr8E-gT5QBAk&callback=initMap" async defer></script>
-    <script src="https://5ba9898d-1b7d-4923-97b8-505eaf7cecf2-00-3r77exdax7qfr.worf.replit.dev/static/map.js" defer></script>
-    <script src="https://5ba9898d-1b7d-4923-97b8-505eaf7cecf2-00-3r77exdax7qfr.worf.replit.dev/static/mqtt.js" defer></script>
+    <script src="{{ url_for('static', filename='map.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='mqtt.js') }}" defer></script>
 </head>
     <body>
         <div class="dashboard-container">

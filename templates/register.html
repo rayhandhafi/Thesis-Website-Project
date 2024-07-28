@@ -1,48 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Page</title>
-    <link rel="stylesheet" href="https://5ba9898d-1b7d-4923-97b8-505eaf7cecf2-00-3r77exdax7qfr.worf.replit.dev/static/regist.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
-</head>
-<body>
-    <div class="register-container">
-        <div class="register-form">
-            <h1 class="register-title">USER <br><span>Daftar</span></h1>
-            <form>
-                <div class="input-group">
-                    <label for="first-name">Nama Depan</label>
-                    <input type="text" id="first-name" name="first-name" placeholder="Nama Depan">
-                </div>
-                <div class="input-group">
-                    <label for="last-name">Nama Belakang</label>
-                    <input type="text" id="last-name" name="last-name" placeholder="Nama Belakang">
-                </div>
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Email anda">
-                </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Password anda">
-                    <span class="password-toggle"><i class="ri-eye-line"></i></span>
-                    <small>Password harus minimum 8 kata, nomor, dan simbol.</small>
-                </div>
-                <div class="input-group">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Password anda">
-                </div>
-                <button type="submit" class="register-btn">Daftar</button>
-                <button type="button" class="google-btn"><i class="ri-google-line"></i> Daftar dengan Google</button>
-                <p class="signin-link">Sudah Punya Akun? <a href="/login">Masuk</a></p>
-            </form>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Register Page</title>
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='regist.css') }}"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="register-container">
+            <div class="register-form">
+                <h1 class="register-title">USER <br /><span>Daftar</span></h1>
+                <form>
+                    <div class="input-group">
+                        <label for="first-name">Nama Depan</label>
+                        <input
+                            type="text"
+                            id="first-name"
+                            name="first-name"
+                            placeholder="Nama Depan"
+                        />
+                    </div>
+                    <div class="input-group">
+                        <label for="last-name">Nama Belakang</label>
+                        <input
+                            type="text"
+                            id="last-name"
+                            name="last-name"
+                            placeholder="Nama Belakang"
+                        />
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Email anda"
+                        />
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Password anda"
+                        />
+                        <span class="password-toggle"
+                            ><i class="ri-eye-line"></i
+                        ></span>
+                        <small
+                            >Password harus minimum 8 kata, nomor, dan
+                            simbol.</small
+                        >
+                    </div>
+                    <div class="input-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input
+                            type="password"
+                            id="confirm-password"
+                            name="confirm-password"
+                            placeholder="Password anda"
+                        />
+                    </div>
+                    <button type="submit" class="register-btn">Daftar</button>
+                    <button type="button" class="google-btn">
+                        <i class="ri-google-line"></i> Daftar dengan Google
+                    </button>
+                    <p class="signin-link">
+                        Sudah Punya Akun? <a href="/login">Masuk</a>
+                    </p>
+                </form>
+            </div>
+            <div class="register-image">
+                <img
+                    src="{{ url_for('static', filename='ds-log.jpg') }}"
+                    alt="Register Image"
+                />
+            </div>
         </div>
-        <div class="register-image">
-            <img src="{{ url_for('static', filename='ds-log.jpg') }}" alt="Register Image">
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"></script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"></script>
+    </body>
 </html>
